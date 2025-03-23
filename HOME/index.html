@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission in Bangalore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="#">Admission in Bangalore</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#main-section">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#engineering-colleges" class="dropbtn">Engineering</a>
+                        <div class="dropdown-content">
+                            <a href="#dayananda-sagar">Dayananda Sagar Engineering</a>
+                            <a href="#ms-ramaiah">MS Ramaiah Institute of Technology</a>
+                            <a href="#bms-college">BMS College of Engineering</a>
+                            <a href="#rv-college">RV College of Engineering</a>
+                        </div>
+                    </li>
+                    <li><a href="#dental-colleges">Dental Colleges</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search colleges...">
+                <button id="searchButton">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-section" id="main-section">
+        <div class="left-content">
+            <h1>Education is the passport of Future,<br>AND we provide visa for it</h1>
+        </div>
+        <div class="right-content">
+            <form class="enquiry-form" id="enquiryForm">
+                <p>Fields marked with an <span class="required">*</span> are REQUIRED</p>
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" placeholder="NAME" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number <span class="required">*</span></label>
+                    <input type="tel" id="mobile" placeholder="MOBILE NUMBER" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select Course <span class="required">*</span></label>
+                    <select id="course" required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="dental">Dental</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="enquiry">Requirement <span class="required">*</span></label>
+                    <textarea id="enquiry" placeholder="TYPE YOUR ENQUIRY HERE" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Featured Colleges Section -->
+    <section class="featured-colleges" id="featured-colleges">
+        <h2>Featured Colleges</h2>
+        <div class="college-grid">
+            <div class="college-card" data-college="Dayananda Sagar Engineering">
+                <div class="image-wrapper">
+                    <img src="./images/dayananda-sagar.jpg" alt="Dayananda Sagar Engineering">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Dayananda Sagar Engineering</h3>
+                <p>Established in 1979, Dayananda Sagar College of Engineering (DSCE) is...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="MS Ramaiah Institute of Technology">
+                <div class="image-wrapper">
+                    <img src="./images/ramaiah-1.jpg" alt="MS Ramaiah Institute of Technology">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>MS Ramaiah Institute of Technology</h3>
+                <p>Located in Bengaluru, Ramaiah Institute of Technology (RIT) is...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="BMS College of Engineering">
+                <div class="image-wrapper">
+                    <img src="./images/bms-college-of-engineering.jpg" alt="BMS College of Engineering">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>BMS College of Engineering</h3>
+                <p>BMS College of Engineering (BMSCE) is an autonomous...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="RV College of Engineering">
+                <div class="image-wrapper">
+                    <img src="./images/rv-college-of-engineering.jpg" alt="RV College of Engineering">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>RV College of Engineering</h3>
+                <p>Rashtreeya Vidyalaya College of Engineering (RVCE) is a private...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div class="banner-content">
+            <h1>Admission in <br>MS Ramaiah University of Applied Sciences</h1>
+        </div>
+    </section>
+
+    <!-- Top Engineering Colleges Section -->
+    <section class="top-colleges-section" id="engineering-colleges">
+        <h2>List of Top Engineering Colleges in Bangalore</h2>
+        <div class="colleges-grid">
+            <div class="college-card" data-college="Sapthagiri College">
+                <div class="image-wrapper">
+                    <img src="./images/Campus-View-of-Sapthagiri-College-of-Engineering-Bangalore_Campus-View.png" alt="Sapthagiri College">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Sapthagiri College</h3>
+                <p>About Sapthagiri College Sapthagiri College of Engineering, Bengaluru, is one...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="MS Ramaiah College of Law">
+                <div class="image-wrapper">
+                    <img src="./images/MS-Ramaiya-Law-admission.jpg" alt="MS Ramaiah College of Law">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>MS Ramaiah College of Law</h3>
+                <p>In the year 1995 MS Ramaiah College of Law, Bangalore...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="Atria Institute of Technology">
+                <div class="image-wrapper">
+                    <img src="./images/atria.jpg" alt="Atria Institute of Technology">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Atria Institute of Technology</h3>
+                <p>Atria Institute of Technology, commonly known as AIT, was established in 2000...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="BMS Institute of Technology and Management Bangalore">
+                <div class="image-wrapper">
+                    <img src="./images/BMSIT-1.jpg" alt="BMS Institute of Technology and Management">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>BMS Institute of Technology and Management Bangalore</h3>
+                <p>About BMSIT Direct Admission in BMS Institute of Technology, BMSIT...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="Sir M Visvesvaraya Institute of Technology">
+                <div class="image-wrapper">
+                    <img src="./images/Sir-MVIT-1.jpg" alt="Sir M Visvesvaraya Institute of Technology">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Sir M Visvesvaraya Institute of Technology</h3>
+                <p>About Sir MVIT College Sir MVIT (Sir M Visvesvaraya Institute...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="REVA University">
+                <div class="image-wrapper">
+                    <img src="./images/highcompress-reva.jpg" alt="REVA University">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>REVA University</h3>
+                <p>About REVA University REVA University was established in 2012. The...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="Nitte Meenakshi Institute of Technology">
+                <div class="image-wrapper">
+                    <img src="./images/NMIT-Copy.jpg" alt="Nitte Meenakshi Institute of Technology">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Nitte Meenakshi Institute of Technology</h3>
+                <p>About NMIT Nitte Meenakshi is a school of training Belief...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="CMS Jain University, Bangalore">
+                <div class="image-wrapper">
+                    <img src="./images/CMS-Jain-University.jpg" alt="CMS Jain University, Bangalore">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>CMS Jain University, Bangalore</h3>
+                <p>About CMS Jain University Center for Management Studies (CMS) is a...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Dental Colleges Section -->
+    <section class="top-dental-colleges-section" id="dental-colleges">
+        <h2>List of Top Dental Colleges in Bangalore</h2>
+        <div class="colleges-grid">
+            <div class="college-card" data-college="Bangalore Institute of Dental Sciences">
+                <div class="image-wrapper">
+                    <img src="./images/Banglore-inst-dental.jpg" alt="Bangalore Institute of Dental Sciences">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Bangalore Institute of Dental Sciences</h3>
+                <p>In 1991, the institution was established under the direction...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="RV Dental College Admission">
+                <div class="image-wrapper">
+                    <img src="./images/RV-Dental-College-Bangalore.jpg" alt="RV Dental College">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>RV Dental College Admission</h3>
+                <p>RV Dental College in Bangalore was founded by Rashtreeya Sikshana Samithi Trust...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="MS Ramaiah Dental College">
+                <div class="image-wrapper">
+                    <img src="./images/ms-dental.jpg" alt="MS Ramaiah Dental College">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>MS Ramaiah Dental College</h3>
+                <p>It is located in the MS Ramaiah Dental College is...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="college-card" data-college="Vydehi Institute of Dental Sciences">
+                <div class="image-wrapper">
+                    <img src="./images/Vydehi-Institute-of-Dental-Sciences-Research-Centre.jpg" alt="Vydehi Institute of Dental Sciences">
+                    <div class="arrow-overlay"></div>
+                </div>
+                <h3>Vydehi Institute of Dental Sciences</h3>
+                <p>According to the famous quote of Sir William Osler goes...</p>
+                <div class="button-wrapper">
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Admission Portal &bull; Built with GeneratePress</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

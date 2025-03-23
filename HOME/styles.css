@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    outline: none;
+    width: 200px;
+}
+
+.search-bar button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #1c86ee;
+}
+
+/* Main Content Section */
+.main-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-content {
+    flex: 1;
+    background: url('background-image.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    position: relative;
+}
+
+.left-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.left-content h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.right-content {
+    flex: 0.5;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.enquiry-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.enquiry-form p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.required {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.enquiry-form button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.enquiry-form button:hover {
+    background: #555;
+}
+
+/* College Card Styles (Shared across sections) */
+.college-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.college-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.college-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.college-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.college-card:hover img {
+    transform: scale(1.1);
+}
+
+.arrow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-overlay::before {
+    content: '→';
+    font-size: 2rem;
+    color: white;
+}
+
+.college-card:hover .arrow-overlay {
+    opacity: 1;
+}
+
+.college-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 10px 5px;
+}
+
+.college-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 10px 15px;
+    line-height: 1.4;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background: #1c86ee;
+}
+
+/* Featured Colleges Section */
+.featured-colleges {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.featured-colleges h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+}
+
+.featured-colleges .college-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Banner Section */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('ms-ramaiah.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Top Engineering Colleges Section */
+.top-colleges-section {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.top-colleges-section h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.top-colleges-section .colleges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Top Dental Colleges Section */
+.top-dental-colleges-section {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.top-dental-colleges-section h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.top-dental-colleges-section .colleges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Section */
+.footer {
+    background: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #1e90ff;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #1e90ff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #1e90ff;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #1c86ee;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+
+    .main-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-content, .right-content {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .featured-colleges .college-grid,
+    .top-colleges-section .colleges-grid,
+    .top-dental-colleges-section .colleges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-colleges-section .colleges-grid {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .hero-banner {
+        height: 300px;
+    }
+
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+
+    .search-bar input {
+        width: 60%;
+    }
+
+    .left-content, .right-content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .left-content h1 {
+        font-size: 2rem;
+    }
+
+    .featured-colleges .college-grid,
+    .top-colleges-section .colleges-grid,
+    .top-dental-colleges-section .colleges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-colleges-section .colleges-grid {
+        grid-template-rows: repeat(8, auto);
+    }
+
+    .hero-banner {
+        height: 250px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer sdection */
+
+footer {
+    background-color: #2f2f2f; /* Dark gray background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer p::before {
+    content: "©";
+    margin-right: 5px;
+}
+
+footer p::after {
+    content: "•";
+    color: #ff0000; /* Red dot */
+    margin: 0 5px;
+}
