@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-left p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.header-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-right ul li {
+    margin-left: 20px;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.header-right ul li .dropdown-arrow {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.header-right ul li .search-icon {
+    font-size: 16px;
+}
+
+/* Main Content and Sidebar */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.main-content {
+    width: 70%;
+}
+
+.college-section {
+    padding-right: 20px;
+}
+
+.college-section h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.college-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Table of Contents Styles */
+.table-of-contents {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.table-of-contents h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+}
+
+.table-of-contents ul li {
+    margin-bottom: 10px;
+}
+
+.table-of-contents ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 16px;
+}
+
+.table-of-contents ul li a:hover {
+    text-decoration: underline;
+}
+
+.table-of-contents ul ul {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.table-of-contents ul ul li {
+    margin-bottom: 5px;
+}
+
+/* Section Styles */
+.about-section,
+.bpt-courses-section,
+.admission-process-section,
+.eligibility-section,
+.fee-structure-section,
+.mpt-fee-structure,
+.paramedical-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2,
+.bpt-courses-section h2,
+.admission-process-section h2,
+.eligibility-section h2,
+.fee-structure-section h2,
+.mpt-fee-structure h2,
+.paramedical-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section p,
+.bpt-courses-section p,
+.admission-process-section p,
+.eligibility-section p,
+.fee-structure-section p,
+.mpt-fee-structure p,
+.paramedical-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Fee Structure and MPT Description */
+.fee-structure-section table,
+.mpt-fee-structure table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.fee-structure-section table th,
+.fee-structure-section table td,
+.mpt-fee-structure table th,
+.mpt-fee-structure table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.fee-structure-section table th,
+.mpt-fee-structure table th {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.fee-structure-section table td,
+.mpt-fee-structure table td {
+    font-size: 16px;
+    color: #666;
+}
+
+.mpt-description,
+.mpt-eligibility,
+.qualifying-examination,
+.marks {
+    margin-bottom: 30px;
+}
+
+.mpt-description h3,
+.mpt-eligibility h3,
+.qualifying-examination h3,
+.marks h3,
+.paramedical-section h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mpt-description p,
+.mpt-eligibility p,
+.qualifying-examination p,
+.marks p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.qualifying-examination ol,
+.marks ol {
+    padding-left: 20px;
+}
+
+.qualifying-examination ol li,
+.marks ol li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Paramedical Section */
+.paramedical-section ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.paramedical-section ul li {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.paramedical-section strong {
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 30%;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form .required {
+    color: red;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form form input,
+.contact-form form select,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-form form input::placeholder,
+.contact-form form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form form select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+}
+
+.contact-form form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.advertisement {
+    background: linear-gradient(135deg, #ff4d4d 50%, #fff 50%);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.ad-content {
+    background: url('student-image.jpg') no-repeat center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ad-content .ad-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ad-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ad-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ad-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.recent-posts h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.recent-posts ul {
+    list-style: none;
+}
+
+.recent-posts ul li {
+    margin-bottom: 10px;
+}
+
+.recent-posts ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 14px;
+}
+
+.recent-posts ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
