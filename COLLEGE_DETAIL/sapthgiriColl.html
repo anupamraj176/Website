@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sapthagiri College</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sapthGiri.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-left">
-            <p>ADMISSION IN BANGALORE</p>
-            <p>Call US @ 7676080008</p>
+   <!-- Header Section -->
+   <header class="header">
+    <div class="header-content">
+        <div class="logo">
+            <a href="#">Admission in Bangalore</a>
         </div>
-        <nav class="header-right">
+        <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li>
-                    <a href="#">Engineering</a>
-                    <span class="dropdown-arrow">▼</span>
+                <li><a href="#main-section">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#engineering-colleges" class="dropbtn">Engineering</a>
+                    <div class="dropdown-content">
+                        <a href="#dayananda-sagar">Dayananda Sagar Engineering</a>
+                        <a href="#ms-ramaiah">MS Ramaiah Institute of Technology</a>
+                        <a href="#bms-college">BMS College of Engineering</a>
+                        <a href="#rv-college">RV College of Engineering</a>
+                    </div>
                 </li>
-                <li><a href="#">Dental Colleges</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#"><span class="search-icon">🔍</span></a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
             </ul>
         </nav>
-    </header>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search colleges...">
+            <button id="searchButton">🔍</button>
+        </div>
+    </div>
+</header>
 
     <!-- Main Content and Sidebar -->
     <div class="container">
